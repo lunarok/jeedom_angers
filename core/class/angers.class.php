@@ -84,7 +84,7 @@ class angers extends eqLogic {
 			}
 			if ($actual > $time) && ($actual < $next)) {
 				$return['next'] = $elt['fields']['date_collecte'];
-				$return['exception'] = $elt['fields']['exception'];
+				$return['exception'] = ($elt['fields']['exception'] == 'N') ? 0:1;
 			}
 			if (($actual == $time)) {
 				$return['binary'] = 1;

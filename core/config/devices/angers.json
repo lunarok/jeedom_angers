@@ -1,0 +1,376 @@
+{
+  "commands": [
+    {
+      "name": "Pollen Armoise",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "pollen:Armoise"
+    },
+    {
+      "name": "Pollen Saule",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "pollen:Saule"
+    },
+    {
+      "name": "Pollen Fromental",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "pollen:Fromental"
+    },
+    {
+      "name": "Pollen Noisetier",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "pollen:Noisetier"
+    },
+    {
+      "name": "Pollen Frêne",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "pollen:Frêne"
+    },
+    {
+      "name": "Pollen Flouve",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "pollen:Flouve"
+    },
+    {
+      "name": "Pollen Bouleau",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "pollen:Bouleau"
+    },
+    {
+      "name": "Pollen Chêne rouvre",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "pollen:Chêne rouvre"
+    },
+    {
+      "name": "Pollen Plantain",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "pollen:Plantain"
+    },
+    {
+      "name": "Pollen Dactyle",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "pollen:Dactyle"
+    },
+    {
+      "name": "Pollen Bouleau",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "pollen:Bouleau"
+    },
+    {
+      "name": "Pollen Aulne",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "pollen:Aulne"
+    },
+    {
+      "name": "Pollen Cyprès",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "pollen:Cyprès"
+    },
+    {
+      "name": "Pollen Peuplier",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "pollen:Peuplier"
+    },
+    {
+      "name": "Pollen Ray-grass",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "pollen:Ray-grass"
+    },
+    {
+      "name": "Pollen Vulpin",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "pollen:Houlque"
+    },
+    {
+      "name": "Pollen Houlque",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "pollen:Houlque"
+    },
+    {
+      "name": "Pollen Fléole",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "pollen:Fléole"
+    },
+    {
+      "name": "Pollen Description Armoise",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "pollenText:Armoise"
+    },
+    {
+      "name": "Pollen Description Saule",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "pollenText:Saule"
+    },
+    {
+      "name": "Pollen Description Fromental",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "pollenText:Fromental"
+    },
+    {
+      "name": "Pollen Description Noisetier",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "pollenText:Noisetier"
+    },
+    {
+      "name": "Pollen Description Frêne",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "pollenText:Frêne"
+    },
+    {
+      "name": "Pollen Description Flouve",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "pollenText:Flouve"
+    },
+    {
+      "name": "Pollen Description Bouleau",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "pollenText:Bouleau"
+    },
+    {
+      "name": "Pollen Description Chêne rouvre",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "pollenText:Chêne rouvre"
+    },
+    {
+      "name": "Pollen Description Plantain",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "pollenText:Plantain"
+    },
+    {
+      "name": "Pollen Description Dactyle",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "pollenText:Dactyle"
+    },
+    {
+      "name": "Pollen Description Bouleau",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "pollenText:Bouleau"
+    },
+    {
+      "name": "Pollen Description Aulne",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "pollenText:Aulne"
+    },
+    {
+      "name": "Pollen Description Cyprès",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "pollenText:Cyprès"
+    },
+    {
+      "name": "Pollen Description Peuplier",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "pollenText:Peuplier"
+    },
+    {
+      "name": "Pollen Description Ray-grass",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "pollenText:Ray-grass"
+    },
+    {
+      "name": "Pollen Description Vulpin",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "pollenText:Houlque"
+    },
+    {
+      "name": "Pollen Description Houlque",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "pollenText:Houlque"
+    },
+    {
+      "name": "Pollen Description Fléole",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "pollenText:Fléole"
+    },
+    {
+      "name": "PM25",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "polluant:PM25"
+    },
+    {
+      "name": "PM10",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "polluant:PM10"
+    },
+    {
+      "name": "NO2",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "polluant:NO2"
+    },
+    {
+      "name": "SO2",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "polluant:SO2"
+    },
+    {
+      "name": "O3",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "polluant:O3"
+    },
+    {
+      "name": "Description PM25",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "polluant:textPM25"
+    },
+    {
+      "name": "Description PM10",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "polluant:textPM10"
+    },
+    {
+      "name": "Description NO2",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "polluant:textNO2"
+    },
+    {
+      "name": "Description SO2",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "polluant:textSO2"
+    },
+    {
+      "name": "Description O3",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "polluant:textO3"
+    },
+    {
+      "name": "Couleur PM25",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "polluant:couleurPM25"
+    },
+    {
+      "name": "Couleur PM10",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "polluant:couleurPM10"
+    },
+    {
+      "name": "Couleur NO2",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "polluant:couleurNO2"
+    },
+    {
+      "name": "Couleur SO2",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "polluant:couleurSO2"
+    },
+    {
+      "name": "Couleur O3",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "polluant:couleurO3"
+    },
+    {
+      "name": "Niveau Maine",
+      "type": "info",
+      "subtype": "numeric",
+      "logicalId": "crue:niveau"
+    },
+    {
+      "name": "OM Passage Précédent",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "om:previous"
+    },
+    {
+      "name": "OM Passage Suivant",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "om:next"
+    },
+    {
+      "name": "OM Passage ce jour",
+      "type": "info",
+      "subtype": "binary",
+      "logicalId": "om:binary"
+    },
+    {
+      "name": "OM Passage demain",
+      "type": "info",
+      "subtype": "binary",
+      "logicalId": "om:tomorrow"
+    },
+    {
+      "name": "OM Prochain passage décalé",
+      "type": "info",
+      "subtype": "binary",
+      "logicalId": "om:exception"
+    },
+    {
+      "name": "Tri Passage Précédent",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "tri:previous"
+    },
+    {
+      "name": "Tri Passage Suivant",
+      "type": "info",
+      "subtype": "string",
+      "logicalId": "tri:next"
+    },
+    {
+      "name": "Tri Passage ce jour",
+      "type": "info",
+      "subtype": "binary",
+      "logicalId": "tri:binary"
+    },
+    {
+      "name": "Tri Passage demain",
+      "type": "info",
+      "subtype": "binary",
+      "logicalId": "tri:tomorrow"
+    },
+    {
+      "name": "Tri Prochain passage décalé",
+      "type": "info",
+      "subtype": "binary",
+      "logicalId": "tri:exception"
+    }
+  ]
+}
