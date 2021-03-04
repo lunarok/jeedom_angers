@@ -82,17 +82,17 @@ class angers extends eqLogic {
 		foreach ($_result['records'] as $elt) {
 			$actual = strtotime('UTC ' . $elt['fields']['date_collecte']);
 			log::add('angers', 'debug', 'Date - ' . $actual . ' ' . $elt['fields']['date_collecte']);
-			if (($actual < $time) && ($actual > $previous)) {
+			if (($actual < $time) && ($actual > $return['previous'])) {
 				$return['previous'] = $elt['fields']['date_collecte'];
 			}
-			if (($actual > $time) && ($actual < $next)) {
+			if (($actual > $time) && ($actual < $return['next'])) {
 				$return['next'] = $elt['fields']['date_collecte'];
 				$return['exception'] = ($elt['fields']['exception'] == 'N') ? 0:1;
 			}
-			if ($actual == $time) {
+			if ($elt['fields']['date_collecte'] == date('Y-m-d',$time)) {
 				$return['binary'] = 1;
 			}
-			if ($tomorrow == $actual) {
+			if ($elt['fields']['date_collecte'] == date('Y-m-d',$tomorrow)) {
 				$return['tomorrow'] = 1;
 			}
 		}
@@ -113,7 +113,6 @@ class angers extends eqLogic {
 			$return['text' . $elt['fields']['sous_indice_2_polluant_name']] = $elt['fields']['sous_indice_2_indice'];
 			$return['couleur' . $elt['fields']['sous_indice_2_polluant_name']] = $elt['fields']['sous_indice_2_couleur'];
 		}
-		log::add('angers', 'debug', 'Pollen - ' . print_r($return, true));
 		return $return;
 	}
 
@@ -172,7 +171,7 @@ class angers extends eqLogic {
 	}
 
 	public function resultPollen() {
-		$data = $this->polluant($this->callOpenData('https://data.angers.fr/api/records/1.0/search/?dataset=pollinarium-sentinelle-angers&q=&rows=20&facet=group'));
+		$data = $this->pollen($this->callOpenData('https://data.angers.fr/api/records/1.0/search/?dataset=pollinarium-sentinelle-angers&q=&rows=20&facet=group'));
 		$this->checkAndUpdateCmd('pollen:Armoise', $data['Armoise']);
 		$this->checkAndUpdateCmd('pollen:Saule', $data['Saule']);
 		$this->checkAndUpdateCmd('pollen:Fromental', $data['Fromental']);
