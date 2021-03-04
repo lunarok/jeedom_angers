@@ -114,22 +114,22 @@ $eqLogics = eqLogic::byType('angers');
             </div>
 
             <div class="form-group">
-              <label class="col-sm-6 control-label">{{URL pour le calendrier OM}}</label>
-              <div class="col-sm-6">
+              <label class="col-sm-3 control-label">{{URL pour le calendrier OM}}</label>
+              <div class="col-sm-8">
                 <input type="text"  class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="urlOM" />
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-6 control-label">{{URL pour le calendrier Tri}}</label>
-              <div class="col-sm-6">
+              <label class="col-sm-3 control-label">{{URL pour le calendrier Tri}}</label>
+              <div class="col-sm-8">
                 <input type="text"  class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="urlTri" />
               </div>
             </div>
 
             <div class="form-group">
-              <label class="col-sm-6 control-label">{{URL pour les polluants}}</label>
-              <div class="col-sm-6">
+              <label class="col-sm-3 control-label">{{URL pour les polluants}}</label>
+              <div class="col-sm-8">
                 <input type="text"  class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="polluant" />
               </div>
             </div>
