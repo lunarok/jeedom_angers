@@ -71,14 +71,14 @@ class angers extends eqLogic {
 	}
 
 	public function findDates($_result) {
-		$time = strtotime('today');
-		$tomorrow = strtotime('+ 1 day');
+		$time = strtotime('UTC today');
+		$tomorrow = strtotime('UTC + 1 day');
 		$return['previous'] = 0;
-		$return['next'] = strtotime('+1 year');
+		$return['next'] = strtotime('UTC +1 year');
 		$return['binary'] = 0;
 		$return['tomorrow'] = 0;
 		foreach ($_result['records'] as $elt) {
-			$actual = strtotime($elt['fields']['date_collecte']);
+			$actual = strtotime('UTC ' . $elt['fields']['date_collecte']);
 			if (($actual < $time) && ($actual > $previous)) {
 				$return['previous'] = $elt['fields']['date_collecte'];
 			}
