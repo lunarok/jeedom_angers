@@ -77,8 +77,11 @@ class angers extends eqLogic {
 		$return['next'] = strtotime('UTC +1 year');
 		$return['binary'] = 0;
 		$return['tomorrow'] = 0;
+		log::add('angers', 'debug', 'Date - Today ' . $time);
+		log::add('angers', 'debug', 'Date - Tomorrow ' . $tomorrow);
 		foreach ($_result['records'] as $elt) {
 			$actual = strtotime('UTC ' . $elt['fields']['date_collecte']);
+			log::add('angers', 'debug', 'Date - ' . $actual . ' ' . $elt['fields']['date_collecte']);
 			if (($actual < $time) && ($actual > $previous)) {
 				$return['previous'] = $elt['fields']['date_collecte'];
 			}
@@ -110,6 +113,7 @@ class angers extends eqLogic {
 			$return['text' . $elt['fields']['sous_indice_2_polluant_name']] = $elt['fields']['sous_indice_2_indice'];
 			$return['couleur' . $elt['fields']['sous_indice_2_polluant_name']] = $elt['fields']['sous_indice_2_couleur'];
 		}
+		log::add('angers', 'debug', 'Pollen - ' . print_r($return, true));
 		return $return;
 	}
 
