@@ -82,10 +82,10 @@ class angers extends eqLogic {
 		foreach ($_result['records'] as $elt) {
 			$actual = strtotime('UTC ' . $elt['fields']['date_collecte']);
 			log::add('angers', 'debug', 'Date - ' . date('Y-m-d',$time) . ' ' . date('Y-m-d',$tomorrow) . ' ' . $elt['fields']['date_collecte']);
-			if (($actual < $time) && ($actual > $return['previous'])) {
+			if (($actual < $time) && ($actual > strtotime($return['previous']))) {
 				$return['previous'] = $elt['fields']['date_collecte'];
 			}
-			if (($actual > $time) && ($actual < $return['next'])) {
+			if (($actual > $time) && ($actual < strtotime($return['next']))) {
 				$return['next'] = $elt['fields']['date_collecte'];
 				$return['exception'] = ($elt['fields']['exception'] == 'N') ? 0:1;
 			}
