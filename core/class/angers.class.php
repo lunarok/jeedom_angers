@@ -81,7 +81,7 @@ class angers extends eqLogic {
 		log::add('angers', 'debug', 'Date - Tomorrow ' . $tomorrow);
 		foreach ($_result['records'] as $elt) {
 			$actual = strtotime('UTC ' . $elt['fields']['date_collecte']);
-			log::add('angers', 'debug', 'Date - ' . $actual . ' ' . $elt['fields']['date_collecte']);
+			log::add('angers', 'debug', 'Date - ' . date('Y-m-d',$time) . ' ' . date('Y-m-d',$tomorrow) . ' ' . $elt['fields']['date_collecte']);
 			if (($actual < $time) && ($actual > $return['previous'])) {
 				$return['previous'] = $elt['fields']['date_collecte'];
 			}
