@@ -229,12 +229,6 @@
       "logicalId": "polluant:PM10"
     },
     {
-      "name": "NO2",
-      "type": "info",
-      "subtype": "numeric",
-      "logicalId": "polluant:NO2"
-    },
-    {
       "name": "SO2",
       "type": "info",
       "subtype": "numeric",
