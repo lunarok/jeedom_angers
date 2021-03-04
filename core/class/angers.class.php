@@ -155,17 +155,14 @@ class angers extends eqLogic {
 		$data = $this->polluant($this->callOpenData($this->getConfiguration('polluant')));
 		$this->checkAndUpdateCmd('polluant:PM25', $data['PM25']);
 		$this->checkAndUpdateCmd('polluant:PM10', $data['PM10']);
-		$this->checkAndUpdateCmd('polluant:NO2', $data['NO2']);
 		$this->checkAndUpdateCmd('polluant:SO2', $data['SO2']);
 		$this->checkAndUpdateCmd('polluant:O3', $data['O3']);
 		$this->checkAndUpdateCmd('polluant:textPM25', $data['textPM25']);
 		$this->checkAndUpdateCmd('polluant:textPM10', $data['textPM10']);
-		$this->checkAndUpdateCmd('polluant:textNO2', $data['textNO2']);
 		$this->checkAndUpdateCmd('polluant:textSO2', $data['textSO2']);
 		$this->checkAndUpdateCmd('polluant:textO3', $data['textO3']);
 		$this->checkAndUpdateCmd('polluant:couleurPM25', $data['couleurPM25']);
 		$this->checkAndUpdateCmd('polluant:couleurPM10', $data['couleurPM10']);
-		$this->checkAndUpdateCmd('polluant:couleurNO2', $data['couleurNO2']);
 		$this->checkAndUpdateCmd('polluant:couleurSO2', $data['couleurSO2']);
 		$this->checkAndUpdateCmd('polluant:couleurO3', $data['couleurO3']);
 	}
