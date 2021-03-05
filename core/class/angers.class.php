@@ -77,7 +77,7 @@ class angers extends eqLogic {
 		$time = strtotime('UTC today');
 		$tomorrow = strtotime('UTC + 1 day');
 		$return['previous'] = 0;
-		$return['next'] = strtotime('UTC +1 year');
+		$return['next'] = date('Y-m-d',strtotime('UTC +1 year'));
 		$return['binary'] = 0;
 		$return['tomorrow'] = 0;
 		log::add('angers', 'debug', 'Date - Today ' . $time);
