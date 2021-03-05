@@ -221,16 +221,7 @@ class angers extends eqLogic {
     }
 		foreach ($this->getCmd('info') as $cmd) {
       $logicalId = $cmd->getLogicalId();
-      $replace['#' . $logicalId . '_history#'] = '';
-      $replace['#' . $logicalId . '_id#'] = $cmd->getId();
-
-      if ($logicalId == 'maree') {
-        $replace['#' . $logicalId . '#'] = $cmd->execCmd();
-      }
-      $replace['#' . $logicalId . '_collect#'] = $cmd->getCollectDate();
-      if ($cmd->getIsHistorized() == 1) {
-        $replace['#' . $logicalId . '_history#'] = 'history cursor';
-      }
+      $replace['#' . $logicalId . '#'] = $cmd->execCmd();
     }
 		return $this->postToHtml($_version, template_replace($replace, getTemplate('core', $version, 'angers', __CLASS__)));
 	}
