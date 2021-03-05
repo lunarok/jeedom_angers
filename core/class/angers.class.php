@@ -21,7 +21,7 @@ require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
 
 class angers extends eqLogic {
 	public static $_widgetPossibility = array('custom' => true);
-	
+
 	public static function cronDaily() {
     $eqLogics = eqLogic::byType('angers', true);
     foreach ($eqLogics as $eqLogic) {
@@ -70,6 +70,7 @@ class angers extends eqLogic {
 		$this->resultCrue();
 		$this->resultPollen();
 		$this->resultPolluant();
+		$this->refreshWidget();
 	}
 
 	public function findDates($_result) {
