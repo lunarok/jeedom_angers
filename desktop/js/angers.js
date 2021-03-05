@@ -46,31 +46,16 @@ function addCmdToTable(_cmd) {
     _cmd.configuration = {};
   }
 
-  var disabled = (init(_cmd.configuration.virtualAction) == '1') ? 'disabled' : '';
   var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '">';
   tr += '<td>';
   tr += '<span class="cmdAttr" data-l1key="id"></span>';
   tr += '</td><td>';
-  if (init(_cmd.type) == 'action') {
-    tr += '<div class="row">';
-    tr += '<div class="col-lg-6">';
-    tr += '<a class="cmdAction btn btn-default btn-sm" data-l1key="chooseIcon"><i class="fas fa-flag"></i> Icone</a>';
-    tr += '<span class="cmdAttr" data-l1key="display" data-l2key="icon" style="margin-left : 10px;"></span>';
-    tr += '</div>';
-    tr += '<div class="col-lg-6">';
-    tr += '<input class="cmdAttr form-control input-sm" data-l1key="name">';
-    tr += '</div>';
-    tr += '</div>';
-  } else {
-    tr += '<input class="cmdAttr form-control input-sm" data-l1key="name" style="width : 140px;" placeholder="{{Nom de l\'info}}">';
-  }
+  tr += '<input class="cmdAttr form-control input-sm" data-l1key="name" style="width : 140px;" placeholder="{{Nom de l\'info}}">';
   tr += '</td><td>';
   tr += '<input class="cmdAttr form-control type input-sm" data-l1key="type" value="info" disabled style="margin-bottom : 5px;" />';
   tr += '<input class="cmdAttr form-control type input-sm" data-l1key="subType" value="' + init(_cmd.subType) + '" disabled style="margin-bottom : 5px;" />';
   tr += '</td><td>';
-  if (init(_cmd.type) == 'info') {
-    tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isHistorized" checked/>{{Historiser}}</label></span> ';
-  }
+  tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isHistorized" checked/>{{Historiser}}</label></span> ';
   tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isVisible" checked/>{{Afficher}}</label></span> ';
   tr += '</td><td>';
   if (is_numeric(_cmd.id)) {
