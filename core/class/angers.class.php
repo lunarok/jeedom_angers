@@ -20,6 +20,8 @@
 require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
 
 class angers extends eqLogic {
+	public static $_widgetPossibility = array('custom' => true);
+	
 	public static function cronDaily() {
     $eqLogics = eqLogic::byType('angers', true);
     foreach ($eqLogics as $eqLogic) {
@@ -205,6 +207,31 @@ class angers extends eqLogic {
 		$this->checkAndUpdateCmd('pollenText:Vulpin', $data['textVulpin']);
 		$this->checkAndUpdateCmd('pollenText:Houlque', $data['textHoulque']);
 		$this->checkAndUpdateCmd('pollenText:Fléole', $data['textFléole']);
+	}
+
+	public function toHtml($_version = 'dashboard') {
+    $replace = $this->preToHtml($_version);
+    if (!is_array($replace)) {
+      return $replace;
+    }
+    $version = jeedom::versionAlias($_version);
+    if ($this->getDisplay('hideOn' . $version) == 1) {
+      return '';
+    }
+		foreach ($this->getCmd('info') as $cmd) {
+      $logicalId = $cmd->getLogicalId();
+      $replace['#' . $logicalId . '_history#'] = '';
+      $replace['#' . $logicalId . '_id#'] = $cmd->getId();
+
+      if ($logicalId == 'maree') {
+        $replace['#' . $logicalId . '#'] = $cmd->execCmd();
+      }
+      $replace['#' . $logicalId . '_collect#'] = $cmd->getCollectDate();
+      if ($cmd->getIsHistorized() == 1) {
+        $replace['#' . $logicalId . '_history#'] = 'history cursor';
+      }
+    }
+		return $this->postToHtml($_version, template_replace($replace, getTemplate('core', $version, 'angers', __CLASS__)));
 	}
 
 }
