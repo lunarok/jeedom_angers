@@ -223,6 +223,8 @@ class angers extends eqLogic {
       $logicalId = $cmd->getLogicalId();
       $replace['#' . $logicalId . '#'] = $cmd->execCmd();
     }
+		$replace['#om:color#'] = ($replace['#om:binary#'] == 1) ? 'green' : '';
+		$replace['#tri:color#'] = ($replace['#tri:binary#'] == 1) ? 'green' : '';
 		return $this->postToHtml($_version, template_replace($replace, getTemplate('core', $version, 'angers', __CLASS__)));
 	}
 
