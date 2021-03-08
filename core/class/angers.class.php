@@ -59,7 +59,7 @@ class angers extends eqLogic {
 		}
 	}
 
-	public function postAjax() {
+	public function postSave() {
 		$this->loadCmdFromConf('angers');
 		$this->refreshAll();
 	}
