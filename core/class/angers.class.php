@@ -231,7 +231,7 @@ class angers extends eqLogic {
 		      case '4':  $color = 'orange'; break;
 		      case '5':  $color = 'red';    break;
 		    }
-				$replace['#' . $$cmd->getLogicalId() . 'Color#'] = $color;
+				$replace['#' . $cmd->getLogicalId() . 'Color#'] = $color;
 			}
     }
 		$replace['#om:color#'] = ($replace['#om:binary#'] == 1) ? 'green' : '';
