@@ -220,7 +220,7 @@ class angers extends eqLogic {
       return '';
     }
 		foreach ($this->getCmd('info') as $cmd) {
-      $replace['#' . $$cmd->getLogicalId() . '#'] = $cmd->execCmd();
+      $replace['#' . $cmd->getLogicalId() . '#'] = $cmd->execCmd();
 			if (strpos($cmd->getLogicalId(),'pollen:') !== false) {
 				switch ($cmd->execCmd()) {
 		      case '-1': $color = 'black'; break;
