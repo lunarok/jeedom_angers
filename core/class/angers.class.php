@@ -236,15 +236,6 @@ class angers extends eqLogic {
     }
 		$replace['#om:color#'] = ($replace['#om:binary#'] == 1) ? 'green' : '';
 		$replace['#tri:color#'] = ($replace['#tri:binary#'] == 1) ? 'green' : '';
-		switch ($cmd->execCmd()) {
-      case '-1': $color = 'black'; break;
-      case '0':  $color = 'black'; break;
-      case '1':  $color = 'lime';  break;
-      case '2':  $color = 'green'; break;
-      case '3':  $color = 'yellow'; break;
-      case '4':  $color = 'orange'; break;
-      case '5':  $color = 'red';    break;
-    }
 		return $this->postToHtml($_version, template_replace($replace, getTemplate('core', $version, 'angers', __CLASS__)));
 	}
 
