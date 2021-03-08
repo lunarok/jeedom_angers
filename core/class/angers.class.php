@@ -220,11 +220,31 @@ class angers extends eqLogic {
       return '';
     }
 		foreach ($this->getCmd('info') as $cmd) {
-      $logicalId = $cmd->getLogicalId();
-      $replace['#' . $logicalId . '#'] = $cmd->execCmd();
+      $replace['#' . $$cmd->getLogicalId() . '#'] = $cmd->execCmd();
+			if ($cmd->getLogicalId()) {
+				switch ($cmd->execCmd()) {
+		      case '-1': $color = 'black'; break;
+		      case '0':  $color = 'black'; break;
+		      case '1':  $color = 'lime';  break;
+		      case '2':  $color = 'green'; break;
+		      case '3':  $color = 'yellow'; break;
+		      case '4':  $color = 'orange'; break;
+		      case '5':  $color = 'red';    break;
+		    }
+				$replace['#' . $$cmd->getLogicalId() . 'Color#'] = $color;
+			}
     }
 		$replace['#om:color#'] = ($replace['#om:binary#'] == 1) ? 'green' : '';
 		$replace['#tri:color#'] = ($replace['#tri:binary#'] == 1) ? 'green' : '';
+		switch ($cmd->execCmd()) {
+      case '-1': $color = 'black'; break;
+      case '0':  $color = 'black'; break;
+      case '1':  $color = 'lime';  break;
+      case '2':  $color = 'green'; break;
+      case '3':  $color = 'yellow'; break;
+      case '4':  $color = 'orange'; break;
+      case '5':  $color = 'red';    break;
+    }
 		return $this->postToHtml($_version, template_replace($replace, getTemplate('core', $version, 'angers', __CLASS__)));
 	}
 
